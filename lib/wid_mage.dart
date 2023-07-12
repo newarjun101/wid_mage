@@ -1,2 +1,2 @@
 library wid_mage;
-export 'package:wid_mage/wid_mage.dart';
+export 'src/util/wid_mage.dart';
