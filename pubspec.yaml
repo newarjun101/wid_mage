@@ -1,7 +1,7 @@
 name: wid_mage
 description: A perfect library to convert widget to image.
 version: 0.0.1
-homepage:
+homepage: https://github.com/prolaymm/wid_mage.git
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
