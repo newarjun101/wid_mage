@@ -9,7 +9,7 @@ class MakeWidgetToImage {
 
   static final GlobalKey globalKey = GlobalKey();
   
- Future<Uint8List?> onCaptureImage() async{
+static Future<Uint8List?> onCaptureImage() async{
     final RenderRepaintBoundary boundary =
     globalKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
     ui.Image image = await boundary.toImage(pixelRatio: 3.0);
