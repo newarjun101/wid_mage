@@ -19,7 +19,7 @@ Now you can use the library.Okay, Lets start more deep dive about the library.
 import 'package:wid_mage/wid_mage.dart';
 
 
-class MyHomePage extends StatefulWidget {
+ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
