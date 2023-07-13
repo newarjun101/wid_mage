@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:wid_mage/src/util/make_widget_to_image.dart';
+import 'package:wid_mage/src/util/wid_mage_controller.dart';
 
 class WidMage extends StatelessWidget {
 
   final Widget child;
-  const WidMage({super.key, required this.child});
+  final GlobalKey globalKey;
+  const WidMage({super.key, required this.child, required this.globalKey});
 
   @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
-      key: MakeWidgetToImage.globalKey,
+      key: globalKey,
       child: child,
     );
   }
