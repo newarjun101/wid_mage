@@ -1,23 +1,25 @@
-# WidMage
-A simple and light library to convert your widget to image file. It is very easy to use and can be convert your widget into image just a few line of code.
-
-## Instllation
-Add **wid_mage** depecency in your _```pubspect.yaml```_
-``` Dart
-depencency :
-  wid_mage : any
-```
-After adding wid_mage in your _```pubspect.yaml```_
-``` Dart
-flutter pub get
-```
-Now you can use the library.Okay, Lets start more deep dive about the library.
-
-### Usage
-
-```Dart
+import 'dart:typed_data';
+import 'package:flutter/material.dart';
 import 'package:wid_mage/wid_mage.dart';
 
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'WidMage Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'WidMage Demo'),
+    );
+  }
+}
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -51,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                 onPressed: () async {
                   try {
-
                     Uint8List? image = await WidMageController.onCaptureImage(
                         globalKey: globalKey);
 
@@ -81,15 +82,3 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 }
-```
-
-For more infomation about ther example please check in Example tab of ```wid_mage``` in pub.dev
-
-# Feature
-In the current moment we only can convert our widget into image. If you want to save your image to your gallery
-please check https://pub.dev/packages/image_gallery_saver
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
